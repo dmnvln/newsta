@@ -1,4 +1,3 @@
-// carousel.js
 document.addEventListener("DOMContentLoaded", function () {
   const track = document.querySelector('.carousel-track');
   const images = Array.from(track.children);
@@ -8,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let current = 0;
 
   function updateCarousel() {
-    track.style.transform = `translateX(-${current * 350}px)`;
+    track.style.transform = `translateX(-${current * 340}px)`;
     dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
   }
 
