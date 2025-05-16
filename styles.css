@@ -347,3 +347,13 @@ footer {
     align-items: flex-start;
   }
 }
+
+.fadein {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s cubic-bezier(.22,.58,.57,1.03), transform 0.8s cubic-bezier(.22,.58,.57,1.03);
+}
+.fadein.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
