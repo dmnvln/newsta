@@ -3,7 +3,7 @@
 :root {
   --black: #18191f;
   --white: #fff;
-  --grey-bg: #f7f7f7;
+  --grey-bg: #ececec;    /* сделан чуть темнее */
   --accent-green: #3B684D;
   --accent-orange: #CF825B;
   --radius: 38px;
@@ -33,11 +33,12 @@ header {
 }
 
 .logo {
-  font-size: 2.2rem;
+  font-size: 1.44rem;
   font-weight: 900;
-  text-transform: uppercase;
   letter-spacing: 0.01em;
   color: var(--accent-green);
+  text-transform: none;
+  white-space: nowrap;
 }
 
 nav {
@@ -51,9 +52,9 @@ nav a {
   font-weight: 700;
   font-size: 1.06em;
   border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
-  border-radius: 7px;
-  transition: color .18s, border .18s, background .18s;
+  padding: 8px 20px 8px 20px;    /* увеличенные отступы! */
+  border-radius: 14px;           /* увеличено */
+  transition: color .18s, border .18s, background .18s, padding .18s;
 }
 nav a:hover,
 .nav-cta {
@@ -82,14 +83,16 @@ section {
   gap: 7vw;
 }
 .hero-left h1 {
-  font-size: 4.4rem;
+  font-size: 3.1rem;          /* был 4.4rem */
   font-weight: 900;
   margin: 0 0 18px 0;
-  line-height: 0.95;
-  letter-spacing: -1px;
+  line-height: 1.08;
+  letter-spacing: -0.7px;
+  max-width: 510px;
+  word-break: break-word;
 }
 .hero-left h1 span {
-  display: block;
+  display: inline;            /* компактное размещение */
 }
 .accent-green { color: var(--accent-green); }
 .accent-orange { color: var(--accent-orange); }
@@ -345,6 +348,76 @@ footer {
   }
   .about-content, .leader-content {
     align-items: flex-start;
+  }
+  .hero-left h1 {
+    font-size: 2.3rem;
+    max-width: 96vw;
+  }
+  .logo {
+    font-size: 1.08rem;
+  }
+  nav a {
+    font-size: 1em;
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 17px 3vw 10px 3vw;
+  }
+  .logo {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+    justify-content: center;
+  }
+  nav a {
+    margin-left: 1vw;
+    padding: 8px 10px;
+    font-size: 0.99em;
+  }
+  .hero {
+    gap: 12px;
+    min-height: 44vh;
+  }
+  .hero-left h1 {
+    font-size: 1.45rem;
+    line-height: 1.13;
+    max-width: 92vw;
+  }
+  .hero-date {
+    font-size: 0.93rem;
+  }
+  .hero-desc {
+    font-size: 1.01rem;
+  }
+  .cta {
+    font-size: 1.02em;
+    padding: 0.8em 1.3em;
+  }
+  .img-placeholder.oval {
+    width: 180px; height: 160px; min-width: 110px;
+  }
+  .about-section h2, .leader-section h2, .certs-section h2 {
+    font-size: 1.3rem;
+  }
+  .about-key {
+    font-size: 1em;
+  }
+  .about-point, .about-ps, .leader-desc, .leader-bio, .register-desc {
+    font-size: 0.96em;
+  }
+  .register-section {
+    padding: 18px 7px;
+    gap: 18px;
+  }
+  .cert-img {
+    width: 90px; height: 90px;
   }
 }
 
