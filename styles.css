@@ -3,9 +3,9 @@
 :root {
   --black: #18191f;
   --white: #fff;
-  --grey-bg: #d2d4d6; /* фон стал ещё темнее */
+  --grey-bg: #d2d4d6; /* ещё темнее фон */
   --accent-green: #3B684D;
-  --accent-green-faded: #a7b3aa; /* для by Natalia Demeneva */
+  --accent-green-faded: #a7b3aa;
   --accent-orange: #CF825B;
   --radius: 38px;
 }
@@ -73,8 +73,8 @@ nav a {
   font-weight: 700;
   font-size: 1.13em;
   border-bottom: 3px solid transparent;
-  padding: 10px 32px 10px 32px; /* стало больше */
-  border-radius: 24px; /* стало больше */
+  padding: 10px 32px 10px 32px;
+  border-radius: 24px;
   transition: color .18s, border .18s, background .18s, padding .18s, box-shadow .18s;
   box-sizing: border-box;
   text-align: center;
@@ -181,7 +181,190 @@ section {
   border-radius: var(--radius);
 }
 
-/* ... остальные стили без изменений ... */
+/* Секция О тренинге (ключевой фикс!) */
+.about-section .about-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.about-section h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin: 0;
+  color: var(--black);
+  line-height: 1.1;
+}
+.about-key {
+  font-size: 1.17rem;
+  color: var(--accent-orange);
+  font-weight: 700;
+  text-align: right;
+}
+.about-content {
+  display: flex;
+  gap: 45px;
+  margin-bottom: 34px;
+}
+.about-list {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.about-point {
+  font-size: 1.22em;
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px 24px 15px 18px;
+  font-weight: 600;
+  color: var(--black);
+  box-shadow: 0 3px 20px -11px #c8c8c8;
+}
+.about-image {
+  flex: 1;
+  min-width: 180px;
+  min-height: 180px;
+}
+.about-ps {
+  font-size: 1.19em;
+  color: var(--accent-green);
+  background: #fff;
+  padding: 22px 28px;
+  border-radius: 22px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+
+.leader-section h2 {
+  font-size: 2.7rem;
+  font-weight: 900;
+  margin-bottom: 28px;
+  color: var(--black);
+}
+.leader-content {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+.leader-photo {
+  width: 210px;
+  height: 210px;
+  min-width: 140px;
+  border-radius: 18px;
+}
+.leader-desc {
+  font-size: 1.22em;
+  font-weight: 600;
+}
+.leader-name {
+  font-size: 1.2em;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.leader-bio {
+  color: #333;
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 1.03em;
+}
+
+.certs-section h2 {
+  font-size: 2.6rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+  color: var(--black);
+}
+.certs-list {
+  display: flex;
+  gap: 34px;
+  justify-content: flex-start;
+}
+.cert-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 18px;
+}
+
+.register-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  background: #fff;
+  border-radius: 38px;
+  margin-bottom: 50px;
+  padding: 44px 38px;
+  box-shadow: 0 7px 36px -14px #d1d1d1;
+}
+.register-left {
+  flex: 1;
+}
+.register-section h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin: 0 0 22px 0;
+}
+.register-section h2 span {
+  display: inline;
+}
+.register-desc {
+  font-size: 1.18em;
+  margin-bottom: 20px;
+}
+.register-form {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  min-width: 300px;
+}
+.register-form input[type="text"],
+.register-form input[type="email"] {
+  font-size: 1.12em;
+  padding: 17px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e2e2;
+  background: #f8f8f8;
+  outline: none;
+  margin-bottom: 3px;
+}
+.register-form button {
+  background: var(--accent-green);
+  color: var(--white);
+  font-weight: 900;
+  border-radius: 11px;
+  padding: 1em 2em;
+  font-size: 1.13em;
+  border: none;
+  box-shadow: 0 5px 22px -8px var(--accent-green);
+  cursor: pointer;
+  transition: background .19s, transform .16s;
+}
+.register-form button:hover {
+  background: var(--accent-orange);
+  transform: scale(1.04);
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 0.97em;
+  gap: 7px;
+}
+.checkbox input[type="checkbox"] {
+  width: 17px; height: 17px;
+  margin: 0 8px 0 0;
+}
+
+footer {
+  margin-top: 18px;
+  background: var(--white);
+  color: var(--accent-green);
+  text-align: center;
+  padding: 19px 0 11px 0;
+  font-size: 1.06rem;
+  border-radius: 50px 50px 0 0 / 30px 30px 0 0;
+  box-shadow: 0 -3px 10px -8px #d1d1d1;
+}
 
 @media (max-width: 950px) {
   section {
@@ -275,6 +458,9 @@ section {
   }
   .about-point, .about-ps, .leader-desc, .leader-bio, .register-desc {
     font-size: 0.91em;
+  }
+  .about-content {
+    gap: 10px;
   }
   .register-section {
     padding: 12px 4px;
